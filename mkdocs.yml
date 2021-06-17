@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: NSI Claveille
+theme : 
+  name : yeti
+  nav_style : dark
+
+
+
+
