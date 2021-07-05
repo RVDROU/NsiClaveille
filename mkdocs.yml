@@ -12,6 +12,9 @@ theme:
   highlightjs: true
   hljs_languages:
     - Python
+    - perl
+
+
 
 
 
