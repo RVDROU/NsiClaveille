@@ -31,7 +31,7 @@ variable qui doit être explicite. Pour l’ordinateur ce nom est une
 référence désignant une adresse mémoire, c’est-à-dire un emplacement
 précis dans la mémoire vive.
 
-Pour stocker une valeur dans une variable, on utilise une instruction appelée affectation, notée par le signe `=`.
+Pour stocker une valuer dans une variable, on utilise une instruction appelée affectation, notée par le signe `=`.
 Par exemple, l'affectation  `x = y + 3` est composée d’une variable `x` et d’une expression `y + 3` .
 
 ### Les opérations
