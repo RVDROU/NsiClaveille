@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Work Sans Bold";
+  src: "assets/fonts/WorkSans/WorkSans-SemiBold.ttf";
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: "assets/fonts/WorkSans/WorkSans-Regular.ttf";
+}
+
+@font-face {
+  font-family: "Work Sans light";
+  src: "assets/fonts/WorkSans/WorkSans-ExtraLight.ttf";
