@@ -479,11 +479,8 @@
                 
                 
                 <h1 id="les-chaines-de-caracteres-dans-python">Les chaînes de caractères dans Python</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Une chaîne de caractères est une structure de <strong><em>données composites</em></strong>.<br />
 Une chaîne de caractères est formée de plusieurs valeurs simples que sont ses différents caractères. Cette structure de données est dîtes <strong><em>immutable,</em></strong> c’est à dire qu’il n’est pas possible de la modifier sur place (impossibilité de rajouter ou retirer des caractères). Pour modifier une chaîne existante, on en extrait les parties appropriées, et on reconstitue une nouvelle chaîne à l’aide de l’opération de concaténation.</p>
-</div>
 <h2 id="declaration-dune-chaine-de-caracteres">Déclaration d’une chaîne de caractères</h2>
 <p>Sous Python, on déclare une chaine de caractères enbordant le texte de guillemets (simple ou double quote)
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est une chaine de caracteres&#39;</span>
@@ -505,15 +502,21 @@ L’indice (ou index) du caractère de la chaîne est défini entre crochets.</p
 <h2 id="le-balayage-dune-chaine-de-caractere">Le balayage d’une <em>chaîne de caractère</em></h2>
 <p>Le balayage d’une chaîne de caractère consiste à lire successivement l’ensemble des caractères qu’elle contient afin d’éventuellement opérer un traitement. Cette opération peut être réalisé avec une boucle <code>for</code> ayant la liste à balayer comme argument. Dans l’exemple suivant, la variable <code>i</code> prendra successivement les valeurs contenues dans le tableau.
 La boucle <code>for</code> sera donc exécutées 9 fois puisque la chaîne <code>a</code> contient 9 caractères.
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>     
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>     
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span> <span class="p">:</span>        
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="err">’’</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 Equivalent à :</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>         
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>         
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="err">’’</span><span class="p">)</span>  
 </code></pre></div>
+</td></tr></table>
 
 <h2 id="operation-sur-les-chaines-de-caracteres">Opération sur les chaînes de caractères</h2>
 <h4 id="concatenation-et-duplication">Concaténation et duplication</h4>
@@ -626,7 +629,7 @@ Equivalent à :</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"translations": {"clipboard.copy": "Copier dans le presse-papier", "search.result.term.missing": "Missing", "search.config.separator": "[\\s\\-]+", "search.result.more.one": "1 more on this page", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.lang": "fr", "search.result.other": "# documents trouv\u00e9s", "search.result.one": "1 document trouv\u00e9", "search.result.none": "Aucun document trouv\u00e9", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "select.version.title": "Select version", "search.result.more.other": "# more on this page", "search.placeholder": "Rechercher"}, "base": "../..", "version": null, "search": "../../assets/javascripts/workers/search.b0710199.min.js", "features": ["header.autohide"]}</script>
+    <script id="__config" type="application/json">{"base": "../..", "search": "../../assets/javascripts/workers/search.b0710199.min.js", "features": ["header.autohide"], "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.result.one": "1 document trouv\u00e9", "search.result.term.missing": "Missing", "search.config.lang": "fr", "search.result.other": "# documents trouv\u00e9s", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.more.one": "1 more on this page", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.placeholder": "Rechercher", "search.result.more.other": "# more on this page", "clipboard.copy": "Copier dans le presse-papier", "search.result.none": "Aucun document trouv\u00e9", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.76f349be.min.js"></script>
