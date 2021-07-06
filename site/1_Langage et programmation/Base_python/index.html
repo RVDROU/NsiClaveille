@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de NSI en première">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Les bases du langage Python - NSI Claveille</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structures-de-base-dun-programme" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NSI Claveille" class="md-header__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI Claveille
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les bases du langage Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI Claveille" class="md-nav__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    NSI Claveille
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Langages et programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Langages et programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langages et programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les bases du langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les bases du langage Python
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#laffectation-de-variables" class="md-nav__link">
+    L’affectation de variables
+  </a>
+  
+    <nav class="md-nav" aria-label="L’affectation de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-operations" class="md-nav__link">
+    Les opérations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affectations-multiples" class="md-nav__link">
+    Affectations multiples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-bonne-pratique-de-nommage" class="md-nav__link">
+    Les bonne pratique de nommage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-test" class="md-nav__link">
+    Le test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-boucle" class="md-nav__link">
+    La boucle
+  </a>
+  
+    <nav class="md-nav" aria-label="La boucle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-non-bornee-while" class="md-nav__link">
+    La boucle non bornée While
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-bornee-for" class="md-nav__link">
+    la boucle bornée for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choisir-entre-une-boucle-for-et-la-boucle-while" class="md-nav__link">
+    Choisir entre une boucle for et la boucle while
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interactions_utilisateur/" class="md-nav__link">
+        Les intéractions avec l'utilisateur
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listes/listes/" class="md-nav__link">
+        Les listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listes/Construction_listes/" class="md-nav__link">
+        Construction de listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chainesCaracteres/" class="md-nav__link">
+        Les chaînes de caractères
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#laffectation-de-variables" class="md-nav__link">
+    L’affectation de variables
+  </a>
+  
+    <nav class="md-nav" aria-label="L’affectation de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-operations" class="md-nav__link">
+    Les opérations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affectations-multiples" class="md-nav__link">
+    Affectations multiples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-bonne-pratique-de-nommage" class="md-nav__link">
+    Les bonne pratique de nommage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-test" class="md-nav__link">
+    Le test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-boucle" class="md-nav__link">
+    La boucle
+  </a>
+  
+    <nav class="md-nav" aria-label="La boucle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-non-bornee-while" class="md-nav__link">
+    La boucle non bornée While
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-bornee-for" class="md-nav__link">
+    la boucle bornée for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choisir-entre-une-boucle-for-et-la-boucle-while" class="md-nav__link">
+    Choisir entre une boucle for et la boucle while
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="structures-de-base-dun-programme">Structures de base d’un programme</h1>
+<p><a href="https://drive.google.com/file/d/1RDupP4ALA8l3ikOhHkzSTGFWGBRErEW4/view?usp=sharing">Format PDF</a>  </p>
+<p>Un programme est un texte qui décrit un algorithme que l’on souhaite
+faire exécuter par une machine. Ce texte est écrit dans un langage
+particulier, appelé langage de programmation. Il existe plusieurs
+milliers de langages de programmation, parmi lesquels <em>Python, Java, C,
+Caml, Fortran, Cobol,</em> etc. Il n’est cependant pas nécessaire d’apprendre
+ces langages les uns après les autres, car ils sont tous plus ou moins
+organisés autour des mêmes notions : <strong>affectation</strong>, <strong>séquence</strong>, <strong>test</strong>,
+<strong>boucle</strong>, <strong>fonction</strong>, etc.</p>
+<p>Le langage principal qui sera utilisé durant ces deux années de
+spécialité NSI est le langage Python.</p>
+<p>Apprendre la programmation, ce n’est pas seulement apprendre à écrire un
+programme, c’est aussi comprendre de quoi il est fait, comment il est
+fait et ce qu’il fait. Un programme est essentiellement constitué
+d’<strong>expressions</strong> et d’<strong>instructions</strong>. Nous introduisons dans
+ce cours trois instructions fondamentales que sont l<strong>’affectation</strong> de
+variables, le <strong>test</strong> et la <strong>boucle</strong>.</p>
+<h2 id="laffectation-de-variables">L’affectation de variables</h2>
+<p>L’essentiel du travail effectué par un programme d’ordinateur consiste à
+manipuler des données organisées comme un ensemble de variable.</p>
+<p>Une variable apparaît dans un langage de programmation sous un nom de
+variable qui doit être explicite. Pour l’ordinateur ce nom est une
+référence désignant une adresse mémoire, c’est-à-dire un emplacement
+précis dans la mémoire vive.</p>
+<p>Pour stocker une valuer dans une variable, on utilise une instruction appelée affectation, notée par le signe <code>=</code>.
+Par exemple, l'affectation  <code>x = y + 3</code> est composée d’une variable <code>x</code> et d’une expression <code>y + 3</code> .</p>
+<h3 id="les-operations">Les opérations</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Opération sur des réels</strong></th>
+<th><strong>Opérations booléennes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td>Soustraction</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Multiplication</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td>Division</td>
+</tr>
+<tr>
+<td align="center">//</td>
+<td>Quotient de la division euclidienne</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td>Reste de la division euclidienne</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td>Puissance</td>
+</tr>
+</tbody>
+</table>
+<p>Le résultat d’une expression booléenne en peut prendre que deux états,
+vrai (<code>True</code> en python) ou faux (<code>False</code>)</p>
+<h3 id="affectations-multiples">Affectations multiples</h3>
+<p>On peut assigner une valeur à plusieurs variables simultanément. Exemple :</p>
+<p><code>&gt;&gt;&gt; x = y = 7</code> </p>
+<p>On peut aussi effectuer des affectations parallèles à l’aide d’un seul
+opérateur :</p>
+<p><code>&gt;&gt;&gt; a, b = 4, 8.33</code></p>
+<h3 id="les-bonne-pratique-de-nommage">Les bonne pratique de nommage</h3>
+<ul>
+<li>Un nom de variable est une séquence de lettres (a → z , A → Z) et de
+    chiffres (0 → 9), qui doit toujours commencer par une lettre.</li>
+<li>Seules les lettres ordinaires sont autorisées. Les lettres
+    accentuées, les cédilles, les espaces, les caractères spéciaux tels
+    que $, #, @, etc. sont interdits, à l’exception du caractère _
+    (souligné).</li>
+<li>La casse est significative (les caractères majuscules et minuscules
+    sont distingués).</li>
+<li>Le nommage des variables doit être le plus explicite possible afin
+    de simplifier la compréhension du programme</li>
+<li>Le nom d’une variable commence toujours par une minuscule</li>
+<li>Vous ne pouvez pas utiliser comme nom de variables les 33 « mots
+    réservés » ci-dessous ( utilisés par le langage lui-même) :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>and</td>
+<td>as</td>
+<td>assert</td>
+<td>break</td>
+<td>class</td>
+<td>continue</td>
+<td>def</td>
+</tr>
+<tr>
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+<td>except</td>
+<td>False</td>
+<td>finally</td>
+<td>for</td>
+</tr>
+<tr>
+<td>from</td>
+<td>global</td>
+<td>if</td>
+<td>import</td>
+<td>in</td>
+<td>is</td>
+<td>lambda</td>
+</tr>
+<tr>
+<td>None</td>
+<td>nonlocal</td>
+<td>not</td>
+<td>or</td>
+<td>pass</td>
+<td>raise</td>
+<td>return</td>
+</tr>
+<tr>
+<td>True</td>
+<td>try</td>
+<td>while</td>
+<td>with</td>
+<td>yield</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="le-test">Le test</h2>
+<p>Si nous voulons pouvoir écrire des applications véritablement utiles, il
+nous faut des technique permettant d’aiguiller le déroulement du
+programme dans différentes directions, en fonction des circonstances
+rencontrées.</p>
+<p>En Python, la syntaxe d’une instruction conditionnelle est la suivante :
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">expression</span> <span class="p">:</span>
+    <span class="n">Instruction1</span>
+    <span class="n">Instruction2</span>
+    <span class="n">Instruction3</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="n">Instruction4</span>
+    <span class="n">Instruction5</span>
+</code></pre></div>
+Remarquez les points suivants :</p>
+<ul>
+<li>la ligne de test commence par <code>if</code>, et la condition est suivie d’un deux points (indispensable, sinon Python arrêtera le script avec une erreur de syntaxe).</li>
+<li>les instructions <em>1</em>, <em>2</em> et <em>3</em> sont celles qui seront exécutées si la
+    condition est vraie (<code>True</code>)</li>
+<li>Ces instructions doivent être indentées (décalées vers la droite) du même nombre de tabulation pour indiquer qu’elles font partie du même <code>if</code>.</li>
+<li>La partie <em>else instruction4 instruction5</em> est facultative. Ces instructions seront exécutées seulement si la condition qui suit le <code>if</code> est fausse (<code>False</code>)</li>
+<li>Le mot <code>else</code> doit être suivi d’un deux-points ; il doit être aligné
+    avec le <code>if</code> auquel il correspond.</li>
+<li>Lorsqu’on veut enchaîner plusieurs tests, on peut utiliser l’instruction <code>elif</code>, qui est la contraction de <code>else if</code>. Cette
+    instruction doit être alignée avec le <code>if</code> correspondant, et elle doit
+    être suivie d’une condition, puis d’un deux-points et après
+    d’instructions indentées, comme pour un <code>if</code>. Les instructions seront
+    exécutées si la condition qui suit le <code>if</code> est fausse, mais que la
+    condition qui suit le <code>elif</code> est vraie.</li>
+</ul>
+<h2 id="la-boucle">La boucle</h2>
+<p>En programmation, on appelle boucle un système d’instructions qui permet
+de répéter un certain nombre de fois (voire indéfiniment) toute une
+série d’opérations. Python propose deux instructions particulières pour
+construire des boucles : l’instruction <code>for</code> et l’instruction <code>while</code></p>
+<h4 id="la-boucle-non-bornee-while">La boucle non bornée While</h4>
+<p>Le mot <code>while</code> signifie « tant que » en anglais. Cette instruction répéte
+continuellement le bloc d’instructions qui suit, tant que l’expression
+est vraie.
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">expression</span> <span class="p">:</span>
+    <span class="n">Instruction1</span>
+    <span class="n">Instruction2</span>
+    <span class="n">Instruction3</span>
+<span class="n">Instruction4</span>
+<span class="n">Instruction5</span>
+</code></pre></div></p>
+<h4 id="la-boucle-bornee-for">la boucle bornée for</h4>
+<p>La syntaxe d’une boucle <code>for</code> est la suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">e</span><span class="err">’</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">Instruction1</span>
+    <span class="n">Instruction2</span>
+<span class="n">Instruction3</span>
+<span class="n">Instruction4</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p><em>i</em> est une variable, <em>e</em> et <em>e’</em> sont des expressions et <em>instruction1</em>,
+<em>instructions2</em> sont des instructions, appelée corps de cette boucle.
+C’est lui qui va s’exécuter autant de fois que précisé dans la boucle.
+Comme dans le cas des tests, le corps d’une boucle doit être indenté.</p>
+</li>
+<li>
+<p>Cette boucle a pour effet d’exécuter le corps de boucle (<em>n</em> - <em>m</em>) fois, où
+<em>m</em> est la valeur de l’expression e et <em>n</em> celle de l’expression <em>e’</em> . Pour
+chaque tour de boucle la valeur de la variable <em>i</em> est successivement <em>m</em>, <em>m+1</em>, ..., <em>n−1</em>.</p>
+</li>
+</ul>
+<p>Par exemple, exécuter la boucle :
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;allô &quot;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t’es où ?&quot;</span><span class="p">)</span><span class="o">*</span>
+</code></pre></div>
+a pour effet d’afficher :</p>
+<p><code>allô allô allô allô allô allô allô allô allô allô t'es où ?</code></p>
+<h3 id="choisir-entre-une-boucle-for-et-la-boucle-while">Choisir entre une boucle for et la boucle while</h3>
+<p>Si on connaît à l’avance le nombre de répétitions à effectuer, la boucle
+<code>for</code> est toute indiquée. À l’inverse, si la décision d’arrêter la boucle ne peut s’exprimer que par un test, c’est la boucle <code>while</code> qu’il faut choisir.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Précédent: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Interactions_utilisateur/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les intéractions avec l&#39;utilisateur" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Les intéractions avec l'utilisateur
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:herve.drougard@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"search": "../../assets/javascripts/workers/search.b0710199.min.js", "version": null, "features": ["header.autohide"], "base": "../..", "translations": {"search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.term.missing": "Missing", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.one": "1 document trouv\u00e9", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.result.none": "Aucun document trouv\u00e9", "search.result.more.other": "# more on this page", "select.version.title": "Select version", "search.result.other": "# documents trouv\u00e9s", "search.placeholder": "Rechercher", "search.result.more.one": "1 more on this page", "clipboard.copy": "Copier dans le presse-papier"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>

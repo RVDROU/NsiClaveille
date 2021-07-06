@@ -1,0 +1,636 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de NSI en première">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Les chaînes de caractères - NSI Claveille</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-chaines-de-caracteres-dans-python" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NSI Claveille" class="md-header__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI Claveille
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les chaînes de caractères
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI Claveille" class="md-nav__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    NSI Claveille
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Langages et programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Langages et programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langages et programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Base_python/" class="md-nav__link">
+        Les bases du langage Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interactions_utilisateur/" class="md-nav__link">
+        Les intéractions avec l'utilisateur
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listes/listes/" class="md-nav__link">
+        Les listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listes/Construction_listes/" class="md-nav__link">
+        Construction de listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les chaînes de caractères
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les chaînes de caractères
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-dune-chaine-de-caracteres" class="md-nav__link">
+    Déclaration d’une chaîne de caractères
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-caracteres-dune-chaine-de-caracteres" class="md-nav__link">
+    Accès aux caractères d’une chaîne de caractères
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-balayage-dune-chaine-de-caractere" class="md-nav__link">
+    Le balayage d’une chaîne de caractère
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-sur-les-chaines-de-caracteres" class="md-nav__link">
+    Opération sur les chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Opération sur les chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concatenation-et-duplication" class="md-nav__link">
+    Concaténation et duplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longueur-dune-chaine-de-caracteres" class="md-nav__link">
+    Longueur d’une chaîne de caractères
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-de-presence-dun-caractere" class="md-nav__link">
+    Test de présence d’un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tranches-slicing" class="md-nav__link">
+    Les tranches (slicing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparaison-de-chaines" class="md-nav__link">
+    Comparaison de chaines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-dune-chaine-de-caracteres" class="md-nav__link">
+    Déclaration d’une chaîne de caractères
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-caracteres-dune-chaine-de-caracteres" class="md-nav__link">
+    Accès aux caractères d’une chaîne de caractères
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-balayage-dune-chaine-de-caractere" class="md-nav__link">
+    Le balayage d’une chaîne de caractère
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-sur-les-chaines-de-caracteres" class="md-nav__link">
+    Opération sur les chaînes de caractères
+  </a>
+  
+    <nav class="md-nav" aria-label="Opération sur les chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concatenation-et-duplication" class="md-nav__link">
+    Concaténation et duplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longueur-dune-chaine-de-caracteres" class="md-nav__link">
+    Longueur d’une chaîne de caractères
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-de-presence-dun-caractere" class="md-nav__link">
+    Test de présence d’un caractère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tranches-slicing" class="md-nav__link">
+    Les tranches (slicing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparaison-de-chaines" class="md-nav__link">
+    Comparaison de chaines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="les-chaines-de-caracteres-dans-python">Les chaînes de caractères dans Python</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Une chaîne de caractères est une structure de <strong><em>données composites</em></strong>.<br />
+Une chaîne de caractères est formée de plusieurs valeurs simples que sont ses différents caractères. Cette structure de données est dîtes <strong><em>immutable,</em></strong> c’est à dire qu’il n’est pas possible de la modifier sur place (impossibilité de rajouter ou retirer des caractères). Pour modifier une chaîne existante, on en extrait les parties appropriées, et on reconstitue une nouvelle chaîne à l’aide de l’opération de concaténation.</p>
+</div>
+<h2 id="declaration-dune-chaine-de-caracteres">Déclaration d’une chaîne de caractères</h2>
+<p>Sous Python, on déclare une chaine de caractères enbordant le texte de guillemets (simple ou double quote)
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est une chaine de caracteres&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="s1">&#39;Ceci est une chaine de caracteres&#39;</span>
+</code></pre></div></p>
+<h2 id="acces-aux-caracteres-dune-chaine-de-caracteres">Accès aux <em>caractères d’une chaîne de caractères</em></h2>
+<p>Puisqu’une chaîne de caractère est une donéne composite, il est possible d’accéder à chaque caractère la composant par son indice. Cette méthode d’accès est similaire à celle utilisée dans la manipulation de listes.
+L’indice (ou index) du caractère de la chaîne est défini entre crochets.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est une chaine de caracteres&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s1">&#39;C&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="s1">&#39;s&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;s&#39;</span>
+</code></pre></div>
+
+<h2 id="le-balayage-dune-chaine-de-caractere">Le balayage d’une <em>chaîne de caractère</em></h2>
+<p>Le balayage d’une chaîne de caractère consiste à lire successivement l’ensemble des caractères qu’elle contient afin d’éventuellement opérer un traitement. Cette opération peut être réalisé avec une boucle <code>for</code> ayant la liste à balayer comme argument. Dans l’exemple suivant, la variable <code>i</code> prendra successivement les valeurs contenues dans le tableau.
+La boucle <code>for</code> sera donc exécutées 9 fois puisque la chaîne <code>a</code> contient 9 caractères.
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>     
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span> <span class="p">:</span>        
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="err">’’</span><span class="p">)</span>
+</code></pre></div>
+Equivalent à :</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>         
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="err">’’</span><span class="p">)</span>  
+</code></pre></div>
+
+<h2 id="operation-sur-les-chaines-de-caracteres">Opération sur les chaînes de caractères</h2>
+<h4 id="concatenation-et-duplication">Concaténation et duplication</h4>
+<p>Les chaînes de caractères supportent l’opérateur <code>+</code> de  concaténation, ainsi que l’opérateur <code>*</code> pour la duplication :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est une &#39;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;chaine de caracteres&#39;</span>      
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>                     
+<span class="s1">&#39;Ceci est une chaine de caracteres&#39;</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span>                      
+<span class="s1">&#39;Ceci est une Ceci est une &#39;</span>
+</code></pre></div>
+
+<h4 id="longueur-dune-chaine-de-caracteres">Longueur d’une chaîne de caractères</h4>
+<p>La fonction <code>len()</code> permet de connaître la longueur d’une chaîne de carctères, c’est-à-dire le nombre de caractères qu’elle contient.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;toi&#39;</span>                   
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                      
+<span class="mi">3</span>   
+</code></pre></div>
+
+<h4 id="test-de-presence-dun-caractere">Test de présence d’un caractère</h4>
+<p>La présence d’un caractère peut être testée avec la commande <code>in</code>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>             
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;C&#39;</span> <span class="ow">in</span> <span class="n">a</span>                    
+<span class="kc">True</span>                            
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;E&#39;</span> <span class="ow">in</span> <span class="n">a</span>                    
+<span class="kc">False</span>
+</code></pre></div></p>
+<h4 id="les-tranches-slicing">Les tranches (slicing)</h4>
+<p>Comme pour les listes, il est possible d’extraire une partie d’une chaîne de caractères en utilisant un indiçage construit sur le modèle <em>[m:n+1]</em> pour récupérer tous les éléments, du émième au énième (de l’élément m inclus à l’élément n+1 exclu).</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>             
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>                      
+<span class="s1">&#39;ci&#39;</span>                            
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>                       
+<span class="s1">&#39;Cec&#39;</span>                       
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>                      
+<span class="s1">&#39;Ceci &#39;</span>
+</code></pre></div>
+
+<h4 id="comparaison-de-chaines">Comparaison de chaines</h4>
+<p>Pour comparer des chaînes de caractères, on utilise les opérateurs <code>==</code> et <code>&lt;=</code> cette dernière relation comparant deux chaînes pour l’ordre alphabétique.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Ceci est &#39;</span>         
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Cebi est &#39;</span>         
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>                      
+<span class="kc">False</span>                           
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span>                       
+<span class="kc">True</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../listes/Construction_listes/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Construction de listes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Construction de listes
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:herve.drougard@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"search": "../../assets/javascripts/workers/search.b0710199.min.js", "version": null, "features": ["header.autohide"], "base": "../..", "translations": {"search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.result.term.missing": "Missing", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.one": "1 document trouv\u00e9", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.result.none": "Aucun document trouv\u00e9", "search.result.more.other": "# more on this page", "select.version.title": "Select version", "search.result.other": "# documents trouv\u00e9s", "search.placeholder": "Rechercher", "search.result.more.one": "1 more on this page", "clipboard.copy": "Copier dans le presse-papier"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
