@@ -1,0 +1,579 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de NSI en première">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Les listes - NSI Claveille</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-listes" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="NSI Claveille" class="md-header__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI Claveille
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les listes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NSI Claveille" class="md-nav__button md-logo" aria-label="NSI Claveille" data-md-component="logo">
+      
+  <img src="../../../assets/image/logoNSI.png" alt="logo">
+
+    </a>
+    NSI Claveille
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Langages et programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Langages et programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langages et programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Base_python/" class="md-nav__link">
+        Les bases du langage Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Interactions_utilisateur/" class="md-nav__link">
+        Les intéractions avec l'utilisateur
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les listes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les listes
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-dune-liste" class="md-nav__link">
+    Déclaration d’une liste
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-donnees-dune-liste" class="md-nav__link">
+    Accès aux données d’une liste
+  </a>
+  
+    <nav class="md-nav" aria-label="Accès aux données d’une liste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-dune-liste" class="md-nav__link">
+    Index d’une liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tranches-slicing" class="md-nav__link">
+    Les tranches (slicing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-sur-les-listes" class="md-nav__link">
+    Opération sur les listes
+  </a>
+  
+    <nav class="md-nav" aria-label="Opération sur les listes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-balayage-dune-liste" class="md-nav__link">
+    Le balayage d’une liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Construction_listes/" class="md-nav__link">
+        Construction de listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chainesCaracteres/" class="md-nav__link">
+        Les chaînes de caractères
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declaration-dune-liste" class="md-nav__link">
+    Déclaration d’une liste
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-donnees-dune-liste" class="md-nav__link">
+    Accès aux données d’une liste
+  </a>
+  
+    <nav class="md-nav" aria-label="Accès aux données d’une liste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-dune-liste" class="md-nav__link">
+    Index d’une liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tranches-slicing" class="md-nav__link">
+    Les tranches (slicing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-sur-les-listes" class="md-nav__link">
+    Opération sur les listes
+  </a>
+  
+    <nav class="md-nav" aria-label="Opération sur les listes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-balayage-dune-liste" class="md-nav__link">
+    Le balayage d’une liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="les-listes">Les listes</h1>
+<p>Dans de nombreuses situations, on a besoin d’utiliser des valeurs qui, comme les textes, les images ou les sons, sont formées de plusieurs nombres ou de plusieurs booléens. Ces valeurs sont dites des <strong>données composites.</strong> . Sous python le nom de <strong>liste</strong> est utilisé.</p>
+<h2 id="declaration-dune-liste">Déclaration d’une liste</h2>
+<p>Sous Python, on peut définir une liste comme une collection d’éléments séparés par des virgules, l’ensemble étant enfermé dans des crochets.</p>
+<p><strong>Exemple</strong> </p>
+<p><img alt="" src="../-s/Pictures/1000020100000FDD00000436BDDDA85B10281FAC.png" /> Structure d'une liste</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">785</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">87</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">785</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">87</span><span class="p">]</span>
+</code></pre></div>
+
+<p>La première instruction crée une variable a dont le contenu <strong>fait référence</strong> à une liste de 10 entiers.</p>
+<h2 id="acces-aux-donnees-dune-liste">Accès aux données d’une liste</h2>
+<p>Un des gros avantages d’une liste est que l’on peut appeler ses éléments par leur position. Ce numéro est appelé indice (ou index) de la liste.</p>
+<p>On accède à une case d’une liste avec l’expression <code>NomVariable[index]</code>. <code>nomVariable</code> correspond au nom de la boîte, dont le contenu est la référence à la liste à <strong>n</strong> cases et index est une expression dont la valeur est un nombre entier compris entre <strong>0</strong> et <strong>n – 1</strong>.</p>
+<h3 id="index-dune-liste">Index d’une liste</h3>
+<p>La numérotation des indexs d’une liste de n éléments commence à partir de zéro et se termine à n-1. Mais la liste peut également être indexée avec des nombres négatifs. Les indices négatifs reviennent à compter à partir de la fin. Leur principal avantage estest de pouvoir accéder au dernier élément d’une liste à l’aide de l’indice -1 sans pour autant connaître la longueur de cette liste. L’avant dernier élément a lui l’indice <strong>-2</strong>, l’avant-avant dernier l’indice <strong>-3</strong>, etc.</p>
+<p><img alt="" src="../-s/Pictures/100002010000126E000005891E5F9A6BD41B3F46.png" /> Indices d'un tableau </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">785</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">87</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="mi">785</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">87</span>
+</code></pre></div>
+
+<h3 id="les-tranches-slicing">Les tranches (slicing)</h3>
+<p>Un autre avantage des listes est la possibilité de sélectionner une partie d’une liste en utilisant un indiçage construit sur le modèle <strong>[m : n+1]</strong> pour récupérer tous les éléments, du émième au énième (de l’élément <strong>m</strong> inclus à l’élément <strong>n+1</strong> exclu). On dit alors qu’on récupère une tranche de la liste, par exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">785</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">87</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="operation-sur-les-listes">Opération sur les listes</h2>
+<h3 id="le-balayage-dune-liste">Le balayage d’une liste</h3>
+<p>Le balyage d’une liste consiste à lire successivement l’ensemble des valeurs contenues dans une liste afin d’éventuellement opérer un traitement. Cette opération peut être réalisé avec une boucle <code>for</code> ayant la liste à balayer comme argument. Dans l’exemple suivant, la variable <strong>i</strong> prendra successivement les valeurs contenues dans le tableau. La boucle <code>for</code> sera donc exécutées 4 fois puisque la liste <strong>a</strong> contient 4 éléments.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Interactions_utilisateur/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Les intéractions avec l&#39;utilisateur" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Les intéractions avec l'utilisateur
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Construction_listes/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Construction de listes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Construction de listes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:herve.drougard@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"features": ["header.autohide"], "search": "../../../assets/javascripts/workers/search.b0710199.min.js", "translations": {"search.placeholder": "Rechercher", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "select.version.title": "Select version", "search.result.one": "1 document trouv\u00e9", "search.result.none": "Aucun document trouv\u00e9", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "search.config.separator": "[\\s\\-]+", "search.result.more.one": "1 more on this page", "search.config.pipeline": "trimmer, stopWordFilter", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.result.other": "# documents trouv\u00e9s"}, "version": null, "base": "../../.."}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
