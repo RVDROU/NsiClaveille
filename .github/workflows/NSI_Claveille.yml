@@ -7,7 +7,7 @@ name: NSI_Claveille
 on:
   push:
     branches: 
-      - master
+      - main
 
 jobs:
   deploy:
