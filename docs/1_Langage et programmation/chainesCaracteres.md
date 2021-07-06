@@ -1,8 +1,8 @@
 # Les chaînes de caractères dans Python
 
-!!! note
-	Une chaîne de caractères est une structure de ***données composites***.  
-	Une chaîne de caractères est formée de plusieurs valeurs simples que sont ses différents caractères. Cette structure de données est dîtes ***immutable,*** c’est à dire qu’il n’est pas possible de la modifier sur place (impossibilité de rajouter ou retirer des caractères). Pour modifier une chaîne existante, on en extrait les parties appropriées, et on reconstitue une nouvelle chaîne à l’aide de l’opération de concaténation.
+
+Une chaîne de caractères est une structure de ***données composites***.  
+Une chaîne de caractères est formée de plusieurs valeurs simples que sont ses différents caractères. Cette structure de données est dîtes ***immutable,*** c’est à dire qu’il n’est pas possible de la modifier sur place (impossibilité de rajouter ou retirer des caractères). Pour modifier une chaîne existante, on en extrait les parties appropriées, et on reconstitue une nouvelle chaîne à l’aide de l’opération de concaténation.
 
 ## Déclaration d’une chaîne de caractères
 
@@ -30,14 +30,14 @@ L’indice (ou index) du caractère de la chaîne est défini entre crochets.
 
 Le balayage d’une chaîne de caractère consiste à lire successivement l’ensemble des caractères qu’elle contient afin d’éventuellement opérer un traitement. Cette opération peut être réalisé avec une boucle `for` ayant la liste à balayer comme argument. Dans l’exemple suivant, la variable `i` prendra successivement les valeurs contenues dans le tableau.
 La boucle `for` sera donc exécutées 9 fois puisque la chaîne `a` contient 9 caractères.
-```python
+```python linenums="1"
 a = 'Ceci est '		
 for i in a :		
 	print(i,end=’’)
 ```
 Equivalent à :
 
-```python
+```python linenums="1"
 a = 'Ceci est '			
 for i in range(len(a)):	
 	print(a[i],end=’’)	
