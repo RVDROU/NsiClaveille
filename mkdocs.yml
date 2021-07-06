@@ -4,17 +4,16 @@ docs_dir: docs
 
 
 theme:
-  name: null
-  custom_dir: 'cinder'
-  colorscheme: dracula
+  name: material
+  font : false
+  logo: assets/image/logoNSI.png
+  palette:
+    primary: indigo
+  language : fr
+  features:
+    - header.autohide
   disable_nav_previous_next: true
   disable_nav_search: true
-  highlightjs: true
-  hljs_languages:
-    - Python
-    - perl
-
-
 
 
 
@@ -26,7 +25,36 @@ nav:
         - 'Les listes' : './1_Langage et programmation/listes/listes.md'
         - 'Construction de listes' : './1_Langage et programmation/listes/Construction_listes.md'
         - 'Les chaînes de caractères' : './1_Langage et programmation/chainesCaracteres.md'
+extra:
+    social:
+       
+        - icon: fontawesome/solid/paper-plane
+          link: mailto:herve.drougard@ac-bordeaux.fr
+          name: Écrire à l'auteur
+    
+
 
 
 markdown_extensions:
-  - admonition
+    - meta
+    - abbr
+    - def_list                      # Les listes de définition.
+    - attr_list                     # Un peu de CSS et des attributs HTML.
+    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+    - admonition                    # Blocs colorés  !!! info "ma remarque"
+    - pymdownx.details              #   qui peuvent se plier/déplier.
+    - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
+    - pymdownx.mark                 # Passage ==surligné==.
+    - pymdownx.tilde                # Passage ~~barré~~ ou en ~indice~.
+    - pymdownx.highlight            # Coloration syntaxique du code
+    - pymdownx.superfences
+    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+    - pymdownx.snippets             # Inclusion de fichiers externe.
+    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+    - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
+    - pymdownx.superfences          # Imbrication de blocs.
+    
+
+  

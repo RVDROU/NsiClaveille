@@ -9,11 +9,11 @@ Les fonctions particulières `print()` et `input()` permettent d’intéragir av
 
 La fonction `print()` sert à afficher du texte et/ou le contenu d’une variable.
 
-```
+```python
 >>> print('Bienvenue au cours de NSI.')
 Bienvenue au cours de NSI.
->>> prenom=’Boris’
->>> print(‘Bonjour’, prenom,’, bienvenue au cours de NSI.’)
+>>> prenom = 'Boris'
+>>> print('Bonjour', prenom,', bienvenue au cours de NSI.')
 Bonjour Boris, bienvenue au cours de NSI.
 ```
 
@@ -42,14 +42,14 @@ _Affiche_
 012
 ```
                                      
-### La fonction input()
+### La fonction `input()`
 
 La fonction `input()` permet des intéraction avec l’utilisateur : elle va stopper l’exécution du programme et attendre que l’utilisateur saisisse une donnée. Le  programme reprend lorsque l’utilisateur appuie sur la touche __ENTREE__. La fonction renvoie alors le texte saisi par l’utilisateur.
 
 L’instruction suivante aura pour effet d’ouvrir une zone de saisie dans laquelle l’utilisateur pourra entrer une valeur. Cette valeur sera affectée à la variable nom.
 
 ```python
-nom=input('Quel est votre nom ?')
+nom = input('Quel est votre nom ?')
 ```
 
 __Remarque__
@@ -57,5 +57,5 @@ __Remarque__
 La valeur renvoyée par la fonction input() est une chaîne de caractère (type __str__). Pour obtenir un nombre entier, il faudra saisir :
 
 ```python
-age=int(input(‘'Quel est votre age ?')) 
+age = int(input(‘'Quel est votre age ?')) 
 ```
