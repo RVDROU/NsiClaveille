@@ -3,7 +3,7 @@
 Bienvenue sur le site de NSI du lycée Claveille à Périgueux.
 
 
-![](-s/assets/image/logoNSI.png)
+![](./assets/image/logoNSI.png)
 
 
 
