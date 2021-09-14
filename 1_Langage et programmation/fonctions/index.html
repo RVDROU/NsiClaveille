@@ -16,7 +16,7 @@
     
     
       
-        <title>Les intéractions avec l'utilisateur - NSI Claveille</title>
+        <title>Les fonctions - NSI Claveille</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-interactions-utilisateur-entreessorties" class="md-skip">
+        <a href="#les-fonctions" class="md-skip">
           Aller au contenu
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les intéractions avec l'utilisateur
+              Les fonctions
             
           </span>
         </div>
@@ -222,6 +222,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Interactions_utilisateur/" class="md-nav__link">
+        Les intéractions avec l'utilisateur
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -234,12 +246,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Les intéractions avec l'utilisateur
+          Les fonctions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Les intéractions avec l'utilisateur
+        Les fonctions
       </a>
       
         
@@ -257,15 +269,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-print" class="md-nav__link">
-    La fonction print()
+  <a href="#definition-dune-fonction" class="md-nav__link">
+    Définition d’une fonction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-input" class="md-nav__link">
-    La fonction input()
+  <a href="#appel-dune-fonction" class="md-nav__link">
+    Appel d’une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-dune-fonction" class="md-nav__link">
+    Spécification d’une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portee-des-variables" class="md-nav__link">
+    Portée des variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Portée des variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-variables-locales" class="md-nav__link">
+    Les variables locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-globale" class="md-nav__link">
+    Variable globale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes-lors-de-la-programmation-de-fonctions" class="md-nav__link">
+    Erreurs fréquentes lors de la programmation de fonctions
   </a>
   
 </li>
@@ -274,18 +327,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fonctions/" class="md-nav__link">
-        Les fonctions
-      </a>
     </li>
   
 
@@ -358,15 +399,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-print" class="md-nav__link">
-    La fonction print()
+  <a href="#definition-dune-fonction" class="md-nav__link">
+    Définition d’une fonction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-fonction-input" class="md-nav__link">
-    La fonction input()
+  <a href="#appel-dune-fonction" class="md-nav__link">
+    Appel d’une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-dune-fonction" class="md-nav__link">
+    Spécification d’une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portee-des-variables" class="md-nav__link">
+    Portée des variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Portée des variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-variables-locales" class="md-nav__link">
+    Les variables locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-globale" class="md-nav__link">
+    Variable globale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-frequentes-lors-de-la-programmation-de-fonctions" class="md-nav__link">
+    Erreurs fréquentes lors de la programmation de fonctions
   </a>
   
 </li>
@@ -384,45 +466,69 @@
               
                 
                 
-                <h1 id="les-interactions-utilisateur-entreessorties">Les intéractions utilisateur (entrées/sorties)</h1>
-<p><a href="https://drive.google.com/file/d/19AFOyG4L4_sAL3MOXYrB70ffDUwP-RCT/view?usp=sharing">Format PDF</a>  </p>
-<p>Dans l’exécution d’un programme, il est fréquent que l’utilisateur ait besoin de saisir des informations.</p>
-<p>Les fonctions particulières <code>print()</code> et <code>input()</code> permettent d’intéragir avec l’utilisateur.</p>
-<h3 id="la-fonction-print">La fonction <code>print()</code></h3>
-<p>La fonction <code>print()</code> sert à afficher du texte et/ou le contenu d’une variable.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bienvenue au cours de NSI.&#39;</span><span class="p">)</span>
-<span class="n">Bienvenue</span> <span class="n">au</span> <span class="n">cours</span> <span class="n">de</span> <span class="n">NSI</span><span class="o">.</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">prenom</span> <span class="o">=</span> <span class="s1">&#39;Boris&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">,</span> <span class="n">prenom</span><span class="p">,</span><span class="s1">&#39;, bienvenue au cours de NSI.&#39;</span><span class="p">)</span>
-<span class="n">Bonjour</span> <span class="n">Boris</span><span class="p">,</span> <span class="n">bienvenue</span> <span class="n">au</span> <span class="n">cours</span> <span class="n">de</span> <span class="n">NSI</span><span class="o">.</span>
+                <h1 id="les-fonctions">Les fonctions</h1>
+<p><a href="https://drive.google.com/file/d/1f2hcQPil3IrIb92RjkkJTDq6Yz7LhGfa/view?usp=sharing">Format PDF</a></p>
+<p>Les fonctions sont des bouts de code d'un programme qui sont exécutés à chaque fois qu'ils sont appelés.  Elles permettent de structurer le code, d’éviter les redondances, de le rendre plus lisible dans le but d’en faciliter la maintenance. L’utilisation de fonctions fait partie des bonnes pratiques de la programmation.</p>
+<h2 id="definition-dune-fonction">Définition d’une fonction</h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nom_fonction</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="p">:</span>
+
+    <span class="c1"># Code de la fonction</span>
+    <span class="k">return</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">retour</span>
+<span class="c1"># Code hors fonction</span>
 </code></pre></div>
-<p><strong>Remarques</strong></p>
-<p>Pour afficher plusieurs données avec la fonction print(), il suffit de les séparer avec des virgules.</p>
-<p>La fonction <code>print()</code> effectue un retour à la ligne après l’affichage du texte. Ce retour à la ligne peut être inhibé avec le paramètre <code>end=''</code>.
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>                                       
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<h2 id="appel-dune-fonction">Appel d’une fonction</h2>
+<p>Considérons une fonction double qui multiplie par 2 la somme de deux nombres passés en paramètre. Une telle fonction s’écrira :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">resultat</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resultat</span>
 </code></pre></div>
-<em>Affiche</em>
-<div class="highlight"><pre><span></span><code>0
-1
-2
+L’appel suivant de la fonction renvoie donc la valeur <em>24</em> (2*(4+8) = 24)</p>
+<p><code>&gt;&gt;&gt; double(4,8)</code></p>
+<p><code>24</code></p>
+<h2 id="specification-dune-fonction">Spécification d’une fonction</h2>
+<p>Une fonction prend des arguments en paramètre, les manipule et renvoie un résultat. Cette organisation d’un programme permet la réutilisation et le partage d’algorithmes plus ou moins complexes. Cette notion de partage oblige les concepteurs de fonctions à décrire la fonction afin de spécifier :</p>
+<ul>
+<li>Le nom de l’algorithme,</li>
+<li>La description des paramètres : quelles variables, quels types ...</li>
+<li>La description du résultat</li>
+</ul>
+<p>Cette spécification est réalisée au début de la fonction par
+l’utilisation de <strong>docstrings</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Calcul la puissance de p du nombre n</span>
+<span class="sd">    arguments : n nombre reel*</span>
+<span class="sd">                p nombre reel*</span>
+<span class="sd">    retour : renvoie le resultat de n puissance p*</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">**</span><span class="n">p</span>
+</code></pre></div>
+<p><em>Remarque</em> : Les docstrings sont créés en apposant <em>trois simples cotes</em> au début du commentaires et trois autres <em>décalés d’une tabulation.</em></p>
+<h2 id="portee-des-variables">Portée des variables</h2>
+<h3 id="les-variables-locales">Les variables locales</h3>
+<p>Les variables définies à l’intérieur de la fonction ont une portée locale c’est à dire qu’elles sont créées à l’appel de la fonction et détruites à la sortie de la fonction. 
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ajoute_1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>                                           
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>                                            
+    <span class="k">return</span> <span class="n">resultat</span>                                         
 </code></pre></div></p>
-<hr />
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>                                       
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<p>Ici resultat, est une variable locale à la fonction. Celle-ci n’existe qu’au sein de la fonction ajoute_1 et n’est pas visible par le programme principal.</p>
+<h3 id="variable-globale">Variable globale</h3>
+<p>Par opposition aux variables locales, une variable globale est une variable créée dans le programme principal (hors de toute fonction). Une variable globale est accessible partout : dans les fonctions et dans le programme principal.
+Par exemple, ce programme affiche la valeur <strong>84</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">double</span><span class="p">()</span> <span class="p">:</span>                                              
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">v</span>                                            
+<span class="n">v</span> <span class="o">=</span> <span class="mi">42</span>                                                  
+<span class="n">w</span> <span class="o">=</span> <span class="n">double</span><span class="p">()</span>                                                
+<span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </code></pre></div>
-<em>Affiche</em>
-<div class="highlight"><pre><span></span><code>012
-</code></pre></div></p>
-<h3 id="la-fonction-input">La fonction <code>input()</code></h3>
-<p>La fonction <code>input()</code> permet des intéraction avec l’utilisateur : elle va stopper l’exécution du programme et attendre que l’utilisateur saisisse une donnée. Le  programme reprend lorsque l’utilisateur appuie sur la touche <strong>ENTREE</strong>. La fonction renvoie alors le texte saisi par l’utilisateur.</p>
-<p>L’instruction suivante aura pour effet d’ouvrir une zone de saisie dans laquelle l’utilisateur pourra entrer une valeur. Cette valeur sera affectée à la variable nom.</p>
-<div class="highlight"><pre><span></span><code><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Quel est votre nom ?&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Remarque</strong></p>
-<p>La valeur renvoyée par la fonction input() est une chaîne de caractère (type <strong>str</strong>). Pour obtenir un nombre entier, il faudra saisir :</p>
-<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="err">‘</span><span class="s1">&#39;Quel est votre age ?&#39;</span><span class="p">))</span> 
-</code></pre></div>
+On recommande cependant de ne pas définir de fonctions dont le code dépend de variables globales dont la valeur peut changer. A l’inverse, il est tout à fait légitime d’utiliser des variables globales pour stocker des constantes utilisées dans des fonctions.</p>
+<h2 id="erreurs-frequentes-lors-de-la-programmation-de-fonctions">Erreurs fréquentes lors de la programmation de fonctions</h2>
+<ul>
+<li>La définition de la fonction se termine par :</li>
+<li>La fonction doit être documentée par l’utilisation de docstrings. Cette documentation est indentée par rapport à la définition de la fonction.</li>
+<li>Le corps de la fonction doit être indenté</li>
+<li>Les variables locales ne doivent pas être appelées à l’extérieur de la fonction</li>
+<li>L’instruction print n’équivaut pas à un return. En effet print permet d’afficher un résultat dans la console alors que return permet de sortir de la fonction et de renvoyer un résultat si besoin.</li>
+</ul>
                 
               
               
@@ -442,7 +548,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Pied de page">
       
         
-        <a href="../Base_python/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Les bases du langage Python" rel="prev">
+        <a href="../Interactions_utilisateur/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Les intéractions avec l&#39;utilisateur" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -451,20 +557,20 @@
               <span class="md-footer__direction">
                 Précédent
               </span>
-              Les bases du langage Python
+              Les intéractions avec l'utilisateur
             </div>
           </div>
         </a>
       
       
         
-        <a href="../fonctions/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les fonctions" rel="next">
+        <a href="../listes/listes/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les listes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Les fonctions
+              Les listes
             </div>
           </div>
           <div class="md-footer__button md-icon">
