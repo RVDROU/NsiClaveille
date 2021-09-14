@@ -8,7 +8,6 @@ Les fonctions sont des bouts de code d'un programme qui sont exécutés à chaqu
 
 ```python
 def nom_fonction(argument1, argument2, ...) :
-
     # Code de la fonction
     return valeur de retour
 # Code hors fonction
