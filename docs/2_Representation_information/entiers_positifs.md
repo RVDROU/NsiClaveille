@@ -5,7 +5,7 @@ Les représentations écrites d’un nombre sont multiples ; elles varient selon
 - Ecriture à base de symboles
 Le principe repose sur l’addition (et parfois soustraction) de symboles représentant des nombres. Par exemple :
     • La numération mésopotamienne, 3000 ans av J.C.
-    • La numération romaine ->  MMXIX = 2019
+    • La numération romaine →  MMXIX = 2019
 
 - Ecriture à base de rang (ou de position).
 Ce principe d’écriture est utilisé actuellement tous les jours  2019 = 2 x 1000 + 0 x 100 + 1 x 10 + 9 x 1.
