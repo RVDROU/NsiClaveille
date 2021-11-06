@@ -34,17 +34,24 @@ extra:
         - icon: fontawesome/solid/paper-plane
           link: mailto:herve.drougard@ac-bordeaux.fr
           name: Écrire à l'auteur
-    
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 
 markdown_extensions:
+    - md_in_html
     - meta
     - abbr
     - def_list                      # Les listes de définition.
     - attr_list                     # Un peu de CSS et des attributs HTML.
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Blocs colorés  !!! info "ma remarque"
+    - pymdownx.arithmatex:
+        generic: true
     - pymdownx.details              #   qui peuvent se plier/déplier.
     - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
     - pymdownx.mark                 # Passage ==surligné==.
