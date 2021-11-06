@@ -26,6 +26,8 @@ nav:
         - 'Les listes' : './1_Langage et programmation/listes/listes.md'
         - 'Construction de listes' : './1_Langage et programmation/listes/Construction_listes.md'
         - 'Les chaînes de caractères' : './1_Langage et programmation/chainesCaracteres.md'
+    - Représentation de l'information :
+      - 'Représentation des entiers positifs' : './2_Representation_information/entiers_positifs.md'
 extra:
     social:
        
