@@ -3,7 +3,7 @@
 
 Dans de nombreuses situations, on a besoin d’utiliser des valeurs qui, comme les textes, les images ou les sons, sont formées de plusieurs nombres ou de plusieurs booléens. Ces valeurs sont dites des **données composites.** . Sous python le nom de **liste** est utilisé.
 
-## Déclaration d’une liste
+## Déclaration d’une liste 
 
 Sous Python, on peut définir une liste comme une collection d’éléments séparés par des virgules, l’ensemble étant enfermé dans des crochets.
 
