@@ -31,9 +31,17 @@ nav:
 extra:
     social:
        
-        - icon: fontawesome/solid/paper-plane
-          link: mailto:herve.drougard@ac-bordeaux.fr
-          name: Écrire à l'auteur
+      - icon: fontawesome/solid/paper-plane
+        link: mailto:herve.drougard@ac-bordeaux.fr
+        name: Écrire à l'auteur
+
+      - icon: fontawesome/brands/github
+        link: https://github.com/RVDROU
+        name: Dépôt git
+
+      - icon: fontawesome/solid/university
+        link: http://claveille.org/
+        name: Lycée Albert Claveille - Périgueux -
 
 extra_javascript:
   - assets/javascripts/mathjax.js
