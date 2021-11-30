@@ -28,6 +28,10 @@ nav:
         - 'Les chaînes de caractères' : './1_Langage et programmation/chainesCaracteres.md'
     - Représentation de l'information :
       - 'Représentation des entiers positifs' : './2_Representation_information/entiers_positifs.md'
+
+    - Annales d'épreuve de spécialité :
+      - "Règlement des épreuves de terminale" : './10_Annales des épreuves partiques/reglement.md'
+      - 'Annales des épreuves pratiques' : './10_Annales des épreuves partiques/EP_NSI.md'
 extra:
     social:
        
