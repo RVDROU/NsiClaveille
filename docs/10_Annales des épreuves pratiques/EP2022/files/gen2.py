@@ -15,9 +15,9 @@ def fichier(nom_doss):
     with open(nom_file, 'w') as f:
         f.write("")
         
-#     nom_file = nom_doss + '/' + 'correction.md'
-#     with open(nom_file, 'w') as f:
-#         f.write("")
+    nom_file = nom_doss + '/' + 'correction.md'
+    with open(nom_file, 'w') as f:
+        f.write("")
 
 def fichiers_1_2():
     for nom_doss in lst:
@@ -27,53 +27,41 @@ def fichiers_1_2():
         fichier(n2)
 
 
-#create_doss()
+create_doss()
 fichiers_1_2()
 
 
 
 
-# contenu = """
-# ### Exercice {0}.1 □
-# !!! example "Exercice {0}.1"
-#     === "Énoncé" 
-#         --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/enonce.md"
-# 
-#     === "Correction"
-#         --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/correction.md"
-# 
-#     === "Source Markdown"
-#             --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/enonce.md"
-# 
-# 
-# ### Exercice {0}.2 □
-# !!! example "Exercice {0}.2"
-#     === "Énoncé" 
-#         --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/enonce.md"
-# 
-#     === "Correction"
-#         --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/correction.md"
-# 
-#     === "Sources Markdown"
-#         ```md
-#         --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/enonce.md"
-#         ```             
-#         """
 contenu = """
 ### Exercice {0}.1 □
 !!! example "Exercice {0}.1"
     === "Énoncé" 
-        --8<-- "./files/{0}_1/enonce.md"
+        --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/enonce.md"
+
+    === "Correction"
+        --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_1/enonce.md"
 
 
 ### Exercice {0}.2 □
 !!! example "Exercice {0}.2"
     === "Énoncé" 
-        --8<-- "./files/{0}_2/enonce.md"
-         
+        --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/enonce.md"
+
+    === "Correction"
+        --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "docs/T6_6_Epreuve_pratique/files/{0}_2/enonce.md"
+        ```             
         """
 
-with open('EP_NSI_2022.md', 'w') as f:
+
+with open('BNS_2022.md', 'w') as f:
     for val in lst:
         f.write(contenu.format(val))
 
