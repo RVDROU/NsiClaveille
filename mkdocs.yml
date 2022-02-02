@@ -30,8 +30,8 @@ nav:
       - 'Représentation des entiers positifs' : './2_Representation_information/entiers_positifs.md'
 
     - Annales d'épreuve de spécialité :
-      - "Règlement des épreuves de terminale" : './10_Annales des épreuves pratiques/reglement.md'
-      - 'Annales des épreuves pratiques' : './10_Annales des épreuves pratiques/EP2022/EP_NSI_2022.md'
+      - "Règlement des épreuves de terminale" : './10_Annales_EP/reglement.md'
+      - 'Annales des épreuves pratiques' : './10_Annales_EP/EP2022/EP_NSI_2022.md'
 extra:
     social:
        
