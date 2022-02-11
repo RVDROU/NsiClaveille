@@ -61,7 +61,7 @@ fichiers_1_2()
 #         """
 
 contenu = """
-### Exercice {0}
+### Sujet {0}
 !!! example "Exercice {0}.1"
     === "Énoncé du sujet 1" 
         --8<-- "docs/10_Annales_EP/EP2022/files/{0}_1/enonce.md"
