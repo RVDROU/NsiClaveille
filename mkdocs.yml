@@ -1,20 +1,6 @@
 site_name: NSI Claveille
-site_description: Cours de NSI en première 
+site_description: Cours de NSI - Lycée Albert Claveille à Périgueux
 docs_dir: docs
-
-
-theme:
-  name: material
-  font : false
-  logo: assets/image/logoNSI.png
-  palette:
-    primary: indigo
-  language : fr
-  features:
-    - header.autohide
-  disable_nav_previous_next: true
-  disable_nav_search: true
-
 
 
 nav:
@@ -32,20 +18,112 @@ nav:
     - Annales d'épreuve de spécialité :
       - "Règlement des épreuves de terminale" : './10_Annales_EP/reglement.md'
       - 'Annales des épreuves pratiques' : './10_Annales_EP/EP2022/EP_NSI_2022.md'
+
+theme:
+    favicon: assets/images/claveille_ico.png
+    icon:
+      logo: material/application-variable
+
+    custom_dir: my_theme_customizations/
+
+    name: material
+    font: false                     # RGPD ; pas de fonte Google
+    language: fr                    # français
+    palette:                        # Palettes de couleurs jour/nuit
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: indigo
+        accent: indigo
+        toggle:
+            icon: material/weather-sunny
+            name: Passer au mode nuit
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: blue
+        accent: blue
+        toggle:
+            icon: material/weather-night
+            name: Passer au mode jour
+    features:
+      - navigation.instant
+      - navigation.tabs
+      - navigation.top
+      - toc.integrate
+      - header.autohide
+
+
+markdown_extensions:
+    - meta
+    - abbr
+
+    - def_list                      # Les listes de définition.
+    - attr_list                     # Un peu de CSS et des attributs HTML.
+    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+    - admonition                    # Blocs colorés  !!! info "ma remarque"
+    - pymdownx.details              #   qui peuvent se plier/déplier.
+    - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
+    - pymdownx.mark                 # Passage ==surligné==.
+    - pymdownx.tilde                # Passage ~~barré~~ ou en ~indice~.
+    - pymdownx.highlight:           # Coloration syntaxique du code
+        auto_title: true
+        auto_title_map:
+            "Python": "🐍 Script Python"
+            "Python Console Session": "🐍 Console Python"
+            "Text Only": "📋 Texte"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
+    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+    - pymdownx.snippets             # Inclusion de fichiers externe.
+    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+    - pymdownx.tabbed:              # Volets glissants.  === "Mon volet"
+        alternate_style: true 
+
+    - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+    - pymdownx.emoji:               # Émojis  :boom:
+        emoji_index:     !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+
+    - pymdownx.arithmatex:
+        generic: true
+    
+
 extra:
     social:
-       
-      - icon: fontawesome/solid/paper-plane
-        link: mailto:herve.drougard@ac-bordeaux.fr
-        name: Écrire à l'auteur
 
-      - icon: fontawesome/brands/github
-        link: https://github.com/RVDROU
-        name: Dépôt git
+        - icon: fontawesome/solid/school
+          link: http://claveille.org
+          name: Site du lycée Albert Claveille
 
-      - icon: fontawesome/solid/university
-        link: http://claveille.org/
-        name: Lycée Albert Claveille - Périgueux -
+        - icon: fontawesome/solid/envelope
+          link: mailto:herve.drougard@ac-bordeaux.fr
+          name: Écrire à l'auteur
+
+    site_url: https://ens-fr.gitlab.io/nsi-pratique
+
+
+plugins:
+  - search
+  - awesome-pages:
+        collapse_single_pages: true
+  - macros
+
+
+
+
+
+
 
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -53,30 +131,3 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
-
-markdown_extensions:
-    - md_in_html
-    - meta
-    - abbr
-    - def_list                      # Les listes de définition.
-    - attr_list                     # Un peu de CSS et des attributs HTML.
-    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
-    - admonition                    # Blocs colorés  !!! info "ma remarque"
-    - pymdownx.arithmatex:
-        generic: true
-    - pymdownx.details              #   qui peuvent se plier/déplier.
-    - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
-    - pymdownx.mark                 # Passage ==surligné==.
-    - pymdownx.tilde                # Passage ~~barré~~ ou en ~indice~.
-    - pymdownx.highlight            # Coloration syntaxique du code
-    - pymdownx.superfences
-    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
-    - pymdownx.snippets             # Inclusion de fichiers externe.
-    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
-        custom_checkbox:    false   #   avec cases d'origine
-        clickable_checkbox: true    #   et cliquables.
-    - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
-    - pymdownx.superfences          # Imbrication de blocs.
-    
-
-  
