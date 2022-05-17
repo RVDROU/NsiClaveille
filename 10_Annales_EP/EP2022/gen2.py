@@ -27,8 +27,8 @@ def fichiers_1_2():
         fichier(n2)
 
 
-create_doss()
-fichiers_1_2()
+#create_doss()
+#fichiers_1_2()
 
 
 
@@ -62,13 +62,13 @@ fichiers_1_2()
 
 contenu = """
 ### Sujet {0}
-!!! example "Exercice {0}.1"
-    === "Énoncé du sujet 1" 
-        --8<-- "docs/10_Annales_EP/EP2022/files/{0}_1/enonce.md"
+[Version originale du sujet](./files/pdf_sources/22-NSI-{0}.pdf){{. target = "_blank"}} en pdf.
+!!! example "Sujet {0}.1"
+    === "Exercice 1" 
+        --8<-- "docs/10_Annales_EP/EP2022/files/markdown_sources/{0}_1/enonce.md"
 
-!!! example "Exercice {0}.2"
-    === "Énoncé de l'exercice 2" 
-        --8<-- "docs/10_Annales_EP/EP2022/files/{0}_2/enonce.md"
+    === "Exercice 2" 
+        --8<-- "docs/10_Annales_EP/EP2022/files/markdown_sources/{0}_2/enonce.md"
 
 """
 with open('EP_NSI_2022.md', 'w') as f:
