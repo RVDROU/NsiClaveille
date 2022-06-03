@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> ACTIVITE 1 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/util1.js" type="application/javascript"></script>
+    
+    <!--lien vers le fichier js-->
+    <script src="activite1.js" type="application/javascript"></script>
+
+</head>
+
+<body onLoad="ecran()">
+    <div>
+
+        <div class="bgimg col-container card-4 animate-fading opacity-min">
+
+            <h1><span class="fond-noir">Interactivité avec </span><span class="jaune"><b>J</b>ava<b>S</b>cript</span></h1>
+            <p class="centrer">NSI - Première - activité 1</p>
+        </div>
+        <div class="menu" onclick="openNav()">&#9776; MENU &#9776;</div>
+        <div class="">
+            <div class="col">
+                <hr>
+                <h2>1.Boite de dialogue</h2>
+                <br>
+                <!-- BOUTON D´OUVERTURE DE LA BOITE DE CONFIRMATION.<br>
+                 APPEL DE LA FONCTION boite() AVEC L'ATTRIBUT onclick-->
+                <button class="button">boite de dialogue</button>
+                
+                <!-- AFFICHAGE DU CHOIX UTILISATEUR-->
+                <p id="texte1"> id='texte1'</p>
+
+                <p>Complétez dans le fichier .js la fonction <code>boite()</code> qui permet d'ouvrir une boite de dialogue <code>prompt()</code>. Elle doit afficher le texte saisi par l´utilisateur dans l'élément &lt;p&gt; (id="texte1") si sa longueur est inférieure à 15 caractères. Dans le cas contraire elle affiche &quot;trop long&quot;.</p>
+
+            </div>
+
+            <div class="col">
+
+                <hr>
+                <h2>2.Range slider</h2>
+                <br>
+                
+                <!-- LA GLISSIERE <input>: créer l'appel de la fonction glissiere()
+                avec l´attribut oninput  -->
+                <input id="entree" type="range" oninput="glissiere()" min="100" max="255" class="slider">
+                <br>
+                
+                <!-- AFFICHAGE VALEUR DE LA POSITION DU CURSEUR DANS CET ELEMENT-->
+                <p id="texte2"> id='texte 2'</p>
+                
+                <p>Complétez la fonction <code>glissiere()</code> qui affiche dans l'élément &lt;p&gt; (id="texte2") le nombre entre 0 et 100 sélectionné par la position du curseur (évènement <code>oninput</code>).</p>
+            </div>
+        </div>
+
+        <div id="ligne2" class="">
+            <div class="col">
+                <hr>
+                <h2>3.Modifier le style (couleur)</h2>
+                <br>
+                
+                <!-- BOUTON POUR CHANGER LA COULEUR... -->
+                <button class="button">change couleur</button>
+                
+                <!-- ... DE CET ELEMENT -->
+                <p id="texte3">id='texte3'</p>
+
+                <p>Ecrivez la fonction <code>changeCouleur()</code>qui permet de changer la couleur du texte en jaune et le fond en bleu de l'élément &lt;p&gt; (id="texte3") après un clic sur ce bouton.</p>
+
+            </div>
+
+            <div class="col">
+                <hr>
+                <h2>4.Modifier le style (taille)</h2>
+                <br>
+                
+                <!-- IMAGE A AGRANDIR... -->
+                <img id="image" src="assets/marat.jpg" class="card-4" />
+
+                <br>
+                <p>Ecrivez la fonction <code>tailleImage(Largeur,hauteur)</code> qui permet lorsque le pointeur de la souris la survole d'agrandir l'image (id="image"), à la taille <code>300px×300px</code>. Elle doit retrouver sa taille originale (<code>100px×100px</code>) lorsque le pointeur ne la survole plus.</p>
+
+            </div>
+
+        </div>
+
+        <div class="">
+            <div class="col">
+                <hr>
+                <h2>5.Nombre entier aléatoire</h2>
+                <br>
+                <!-- BOUTON POUR GENERER LE NOMBRE -->
+                <button class="button">générer nombre</button>
+                
+                <!-- AFFICHAGE DU NOMBRE -->
+                <p id="texte4"> id='texte4'</p>
+                <p>Complétez  la fonction <code>randomNb(max)</code> afin qu´elle retourne un nombre aléatoire compris entre 0 et un entier max passé en paramètre. Compléter ensuite la fonction <code>afficheNb()</code> afin qu'elle affiche dans l'élément &lt;p&gt; (id="texte4"), un nombre aléatoire compris entre 0 et 99 à chaque clic sur le bouton.</p>
+
+            </div>
+
+            <div class="col">
+                <hr>
+                <h2>6.Couleur de fond</h2>
+                <br>
+                <!-- BOUTON D'APPEL DE LA FONCTION affichage() -->
+                <button class="button">random couleur</button>
+                
+                <!-- AFFICHAGE DU CODE DECIMAL DE LA COULEUR-->
+                <p id="texte5"> id='texte5'</p>
+                <p>Observez la définition de la fonction <code>randomCouleur()</code>. Compléter la fonction <code>affichage()</code> qui permet, à chaque clic sur le bouton de changer la couleur de fond de la page aléatoirement et d´afficher le code décimal correspondant dans l´élément &lt;p&gt; (id="texte5") Testez-le ensuite après avoir complété le tag HTML du bouton ‘random couleur’.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- GESTION DU MENU NE PAS MODIFIER -->
+
+    <div class="hamb" onclick="recharge()">&#8635;</div>
+    <div id="leMenu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div>
+            <br><br><br><br><br><br>
+            
+            <a href="activite1.html">Activité 1: interactivité</a>
+            <a href="assets/aide-1.pdf" target="_blank" onclick="closeNav()">SOLUTIONS PARTIELLES</a>
+            <a href="#">......</a>
+            <a href="#">...RESSOURCES...</a>
+
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/color" target="_blank">Le style color</a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById" target="_blank">Accès au contenu d´une balise</a>
+           </div>
+    </div>
+    <!-- bas de page -->
+    <footer class="bgimg opacity-min display-container annimate-fading">
+        <span class="centrer fond-noir display-bottommiddle">Tiré d'un travail de Frédéric PEURIERE- Stéphane BEAUDET -> Merci à eux</span>
+    </footer>
+</body>
+
+</html>

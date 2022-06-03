@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> CORRIGÉ-ACTIVITE 1 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/util1.js" type="application/javascript"></script>
+    
+    <!--lien vers le fichier js-->
+    <script src="activite1.js" type="application/javascript"></script>
+
+</head>
+
+<body onLoad="ecran()">
+    <div>
+
+        <div class="bgimg col-container card-4 animate-fading opacity-min">
+
+            <h1><span class="fond-noir">Interactivité avec </span><span class="jaune"><b>J</b>ava<b>S</b>cript</span></h1>
+            <p class="centrer">NSI - Première - activité 1</p>
+        </div>
+        <div class="menu" onclick="openNav()">&#9776; MENU &#9776;</div>
+        <div class="">
+            <div class="col">
+                <hr>
+                <h2>1.Boite de dialogue</h2>
+                <br>
+                <!-- BOUTON D´OUVERTURE DE LA BOITE DE CONFIRMATION.<br>
+                 APPEL DE LA FONCTION boite() AVEC L'ATTRIBUT onclick-->
+                <button onclick="boite()" class="button">boite de dialogue</button>
+                
+                <!-- AFFICHAGE DU CHOIX UTILISATEUR-->
+                <p id="texte1"> id='texte1'</p>
+
+                <p>Complétez dans le fichier .js la fonction <code>boite()</code> qui permet d'ouvrir une boite de dialogue <code>prompt()</code>. Elle doit afficher le texte saisi par l´utilisateur dans l'élément &lt;p&gt; (id="texte1") si sa longueur est inférieure à15 caractères. Dans le cas contraire elle affiche &quot;trop long&quot;.</p>
+
+            </div>
+
+            <div class="col">
+
+                <hr>
+                <h2>2.Range slider</h2>
+                <br>
+                
+                <!-- LA GLISSIERE <input> créer l'appel de la fonction glissiere()
+                avec l´attribut oninput  -->
+                <input id="entree" type="range" oninput="glissiere()" min="0" max="100" class="slider">
+                <br>
+                
+                <!-- AFFICHAGE VALEUR DE LA POSITION DU CURSEUR DANS CET ELEMENT-->
+                <p id="texte2"> id='texte2'</p>
+                <p>Complétez la fonction <code>glissière()</code> qui affiche dans l'élément &lt;p&gt; (id="texte2") le nombre entre 0 et 100 sélectionné par la position du curseur (évènement <code>oninput</code>).</p>
+            </div>
+        </div>
+
+        <div id="ligne2" class="">
+            <div class="col">
+                <hr>
+                <h2>3.Modifier le style (couleur)</h2>
+                <br>
+                
+                <!-- BOUTON POUR CHANGER LA COULEUR... -->
+                <button onclick="changeCouleur()" class="button">change couleur</button>
+                
+                <!-- ... DE CET ELEMENT -->
+                <p id="texte3">id='texte3'</p>
+
+                <p>Ecrivez la fonction <code>changeCouleur()</code>qui permet de changer la couleur du texte en jaune et le fond en bleu de l'élément &lt;p&gt; (id="texte3") après un clic sur ce bouton.</p>
+
+            </div>
+
+            <div class="col">
+                <hr>
+                <h2>4.Modifier le style (taille)</h2>
+                <br>
+                
+                <!-- IMAGE A AGRANDIR -->
+                <img id="image" onmouseover="tailleImage(400,400)" onmouseout="tailleImage(100,100)" src="assets/marat.jpg" class="card-4" title="Pierre-Yves PEURIERE"/>
+
+                <br>
+                <p>Ecrivez la fonction <code>tailleImage(Largeur,hauteur)</code> qui permet lorsque le pointeur de la souris la survole d'agrandir l'image (id="image"), à la taille <code>300px×300px</code>. Elle doit retrouver sa taille originale (<code>100px×100px</code>) lorsque le pointeur ne la survole plus.</p>
+
+            </div>
+
+        </div>
+
+        <div class="">
+            <div class="col">
+                <hr>
+                <h2>5.Nombre entier aléatoire</h2>
+                <br>
+                <!-- BOUTON POUR GENERER LE NOMBRE -->
+                <button onclick="afficheNb()" class="button">générer nombre</button>
+                
+                <!-- AFFICHAGE DU NOMBRE -->
+                <p id="texte4"> id='texte4'</p>
+                <p>Observez la définition de la fonction <code>randomNb(max)</code>. Compléter la fonction <code>afficheNb()</code>afin qu'elle affiche dans l'élément &lt;p&gt; (id="texte4"), un nombre aléatoire compris entre 0 et 99 à chaque clic sur le bouton.</p>
+
+            </div>
+
+            <div class="col">
+                <hr>
+                <h2>6.Couleur de fond</h2>
+                <br>
+                <!-- APPEL DE LA FONCTION affichage() -->
+                <button onclick="affichage()" class="button">random couleur</button>
+                
+                <!-- AFFICHAGE DU CODE DECIMAL DE LA COULEUR-->
+                <p id="texte5"> id='texte5'</p>
+                <p>Observez la définition des fonctions <code>randomCouleur()</code> et <code>affichage()</code>. Expliquez leur fonctionnement. Testez-le ensuite après avoir complété le tag HTML du bouton ‘random couleur’.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- GESTION DU MENU NE PAS MODIFIER -->
+
+    <div class="bandeau"><img src="assets/bandeau.png"/></div>
+
+    <div class="hamb" onclick="recharge()">&#8635;</div>
+    <div id="leMenu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div>
+            <br><br><br><br><br><br>
+             <a href="../presentation.pdf" target="_blank" onclick="closeNav()">Présentation de l´activité</a>
+            <a href="../NSI-javascript.pdf" target="_blank" onclick="closeNav()">Document elève</a>
+            <a href="activite1.html">Activité 1: interactivité</a>
+            <a href="activite2.html">Activité 2: la synthèse RGB</a>
+            <a href="#">......</a>
+            <a href="activite1.js" target="_blank" onclick="closeNav()">CODE JS COMPLET</a>
+            <a href="#">......</a>
+            <span>Identifiants des zones d'affichage:</span>
+            <span onclick="montre(),closeNav()">Afficher</span>
+
+            <a href="#">......</a>
+
+            <a href="#">...RESSOURCES...</a>
+
+            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/color" target="_blank">Le style color</a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById" target="_blank">Accès au contenu d´une balise</a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element" target="_blank">Les balises HTML</a><a href="http://edutechwiki.unige.ch/fr/Brackets#Utilisation" target="_blank" onclick="closeNav()">[Brackets] mode d´emploi</a>
+        </div>
+    </div>
+    <!-- bas de page -->
+    <footer class="bgimg opacity-min display-container annimate-fading">
+        <span class="centrer fond-noir display-bottommiddle">NSI - Audrey LEDOUX - Frédéric PEURIERE</span>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿Von Neumann
+
+Von Neumann a donné son nom à l'architecture de von Neumann utilisée dans la quasi-totalité des ordinateurs modernes, l'apport d'autres collaborateurs de l'EDVAC en est par conséquent grandement minimisé (on citera J. Presper Eckert, Grace Hopper et John William Mauchly parmi d'autres). Cela est dû au fait qu'il est, en 1945, le rapporteur des travaux pionniers en la matière (First Draft of a Report on the EDVAC). Le modèle de calculateur à programme auquel son nom reste attaché et qu'il attribuait lui-même à Alan Turing, possède une unique mémoire qui sert à conserver les instructions et les données. Ce modèle, extrêmement innovant pour l'époque, est à la base de la conception de la plupart des ordinateurs conçus aujourd'hui. 
+
+Grace Hooper
+En 1943, elle travaille dans l'équipe de Howard Aiken sur l'ordinateur Harvard Mark I. Elle fait partie du premier groupe, comptant trois personnes, apprenant à le programmer. Puis continue à travailler au développement des ordinateurs Harvard Mark II puis Harvard Mark III pour le compte du Computation Laboratory d'Harvard. 
+Elle est à l’origine du développement du langage COBOL en 1959. 
+
+Alan Turing
+Turing est surtout connu pour ses travaux sur la cryptanalyse qui permis de déchiffrer Enigma. Cette machine était utilisée par les Allemands durant la seconde guerre mondiale pour chiffrer ses communications. Il a aussi exploré le problème de l'intelligence artificielle en proposant une expérience maintenant connue sous le nom de test de Turing, où il tente de définir une épreuve permettant de qualifier une machine de « consciente » ; Turing fait le « pari que d'ici cinquante ans, il n'y aura plus moyen de distinguer les réponses données par un homme ou un ordinateur, et ce sur n'importe quel sujet »
+
+Dennis Ritchie
+Au début des années 1970, programmeur aux Laboratoires Bell, il travaille avec Ken Thompson au développement d'Unix. Le langage B de Thompson étant trop limité pour les besoins du nouveau système, Ritchie est amené à créer sur les mêmes bases le langage C. 
+
+Richard Stallman
+Connu aussi sous les initiales rms, Richard Stallman est un programmeur et militant du logiciel libre. Initiateur du mouvement du logiciel libre, il lance, en 1983, le projet GNU et la licence publique générale GNU connue aussi sous le sigle GPL. Il a popularisé le terme anglais « copyleft »2. Programmeur renommé de la communauté informatique américaine et internationale, il a développé de nombreux logiciels dont les plus connus des développeurs sont l’éditeur de texte GNU Emacs, le compilateur C de GNU (GCC), le débogueur GNU (gdb)
+
+Tim Berners Lee
+Tim Berners Lee est un informaticien britannique, principal inventeur du World Wide Web (WWW) au tournant des années 1990 lors de ses travaux au CERN. Il est considéré comme l'inventeur du HTML en 1992
+
+Linus Torvalds
+Il est connu pour avoir créé en 1991 (à 22 ans) le noyau Linux dont il continue de diriger le développement. Il en est considéré comme le « dictateur bienveillant à vie » (Benevolent Dictator for Life). 
+Il a également créé le logiciel de gestion de versions décentralisée Git et le logiciel d'enregistrement et de planification des plongées Subsurface 
+
