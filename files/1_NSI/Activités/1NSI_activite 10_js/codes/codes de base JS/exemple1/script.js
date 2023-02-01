@@ -1,1 +1,0 @@
-alert ("JavaScript dans un autre fichier");
